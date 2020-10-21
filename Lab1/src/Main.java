@@ -100,7 +100,7 @@ public class Main {
 		int[] a =new int[] {3,12,9,4,2};
 		System.out.println(std(a));
 		
-		//- Write a program that determines a given matrix is a scalar matrix or not.  
+		//4- Write a program that determines a given matrix is a scalar matrix or not.  
 		//Scalar matrix is a diagonal matrix in which all of the diagonal elements are equal.
 		System.out.println("\n------ 4. Question ------");
 		
