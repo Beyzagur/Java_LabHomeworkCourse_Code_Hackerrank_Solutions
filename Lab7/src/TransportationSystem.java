@@ -48,14 +48,14 @@ public class TransportationSystem {
 	}
 
 	public TransportationSystem() {
-		// TODO Auto-generated method stub
+	
 		PriorityQueue B1 = new PriorityQueue(1000);
 		PriorityQueue B2 = new PriorityQueue(1000);
 		int count = 0;
 		int counter = 0;
 		int tour=0;
 
-		File file = new File("C:\\Users\\beyza\\OneDrive\\Masaüstü\\data.txt");
+		File file = new File("C:\\data.txt"); //Enter the location of the data.txt file here.
 		try {
 			Scanner scn = new Scanner(file);
 			while (scn.hasNextLine()) {
