@@ -1,0 +1,191 @@
+Write a program with priority queue for public transportation management system.
+The system has one bus, three bus stations (B1, B2, B3), and many passengers (max 1000).
+B1 is the first bus station, B2 is the second one and B3 is the last. Passengers can get on the bus from the bus stations B1 and B2. But all
+passengers have to get off the bus at the last bus station B3.
+
+Bus design permits a full 8 passengers to travel in comfort with ample leg room on both sides of the aisle. Hence, maximum 8 passengers
+can travel on the bus.
+Passengers have the following attributes: age and type (student or normal). The passengers, who are 65 years old or older, don&#39;t have a
+passenger card, because free public transport is available for everyone 65 years old and over. If the passenger is a student, the system
+should decrease 1 TL from the card for the journey; else the system decreases 2 TL.
+In order to get on the bus, passengers enter into the queue at the bus stations B1 and B2. The passengers 70 years of age and over have
+priority, they should travel first.
+The passenger information should be read from a text input file (c:\\data.txt). The first record must be inserted into the related priority
+queue, and then the second record must be inserted and so on. When a passenger 70 years or older is coming, the order in the queue must
+be updated.
+After all passengers in the input file are added into the queues, the bus journey is started. If the bus can’t transport all the passengers at
+the bus stations, it comes again for the remaining passengers in the next tour. It is required from the application to print the passengers at
+the bus stations B1 and B2 at each tour. The program should also display the overall income from the bus.
+File Format:
+ID Station Age Type
+Example Input File:
+1 B1 30 normal
+2 B1 70 normal
+3 B2 20 student
+4 B1 18 student
+5 B1 80 normal
+6 B1 75 normal
+7 B2 15 student
+8 B2 65 normal
+9 B1 29 normal
+10 B1 74 normal
+11 B2 19 student
+12 B1 25 student
+13 B1 71 normal
+14 B1 32 normal
+15 B1 76 normal
+16 B2 22 student
+17 B1 21 student
+18 B1 82 normal
+19 B1 73 normal
+20 B1 28 normal
+21 B1 68 normal
+22 B1 55 normal
+23 B1 42 normal
+24 B2 51 normal
+25 B1 37 normal
+26 B1 79 normal
+27 B2 75 normal
+28 B1 23 student
+29 B1 67 normal
+30 B2 17 student
+31 B2 29 normal
+32 B2 80 normal
+33 B2 20 student
+
+Priority Queue B1
+Front
+2 B1 70 normal
+5 B1 80 normal
+6 B1 75 normal
+10 B1 74 normal
+13 B1 71 normal
+15 B1 76 normal
+18 B1 82 normal
+19 B1 73 normal
+26 B1 79 normal
+1 B1 30 normal
+4 B1 18 student
+9 B1 29 normal
+12 B1 25 student
+14 B1 32 normal
+17 B1 21 student
+20 B1 28 normal
+21 B1 68 normal
+22 B1 55 normal
+23 B1 42 normal
+25 B1 37 normal
+28 B1 23 student
+29 B1 67 normal
+Rear
+
+Priority Queue B2
+Front
+27 B2 75 normal
+32 B2 80 normal
+3 B2 20 student
+7 B2 15 student
+8 B2 65 normal
+11 B2 19 student
+16 B2 22 student
+24 B2 51 normal
+30 B2 17 student
+31 B2 29 normal
+33 B2 20 student
+Rear
+
+After Tour 1 After Tour 2
+Priority Queue B1
+Front
+26 B1 79 normal
+1 B1 30 normal
+4 B1 18 student
+9 B1 29 normal
+12 B1 25 student
+14 B1 32 normal
+17 B1 21 student
+20 B1 28 normal
+21 B1 68 normal
+22 B1 55 normal
+23 B1 42 normal
+25 B1 37 normal
+28 B1 23 student
+29 B1 67 normal
+Rear
+
+Priority Queue B2
+Front
+27 B2 75 normal
+32 B2 80 normal
+3 B2 20 student
+7 B2 15 student
+8 B2 65 normal
+11 B2 19 student
+16 B2 22 student
+24 B2 51 normal
+30 B2 17 student
+31 B2 29 normal
+33 B2 20 student
+Rear
+
+Priority Queue B1
+Front
+21 B1 68 normal
+22 B1 55 normal
+23 B1 42 normal
+25 B1 37 normal
+28 B1 23 student
+29 B1 67 normal
+Rear
+
+Priority Queue B2
+Front
+27 B2 75 normal
+32 B2 80 normal
+3 B2 20 student
+7 B2 15 student
+8 B2 65 normal
+11 B2 19 student
+16 B2 22 student
+24 B2 51 normal
+30 B2 17 student
+31 B2 29 normal
+33 B2 20 student
+Rear
+
+After Tour 3 After Tour 4
+Priority Queue B1
+Front
+Rear
+
+Priority Queue B2
+Front
+3 B2 20 student
+7 B2 15 student
+8 B2 65 normal
+11 B2 19 student
+16 B2 22 student
+24 B2 51 normal
+30 B2 17 student
+31 B2 29 normal
+33 B2 20 student
+Rear
+
+Priority Queue B1
+Front
+Rear
+
+Priority Queue B2
+Front
+33 B2 20 student
+Rear
+
+After Tour 5
+Priority Queue B1
+Front
+Rear
+
+Priority Queue B2
+Front
+Rear
+Overall Income = 28 TL
