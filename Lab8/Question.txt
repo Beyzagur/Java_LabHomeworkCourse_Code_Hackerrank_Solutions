@@ -1,0 +1,17 @@
+Write a Single Linked List class that contains the following methods:
+insert() // inserts an element to the single linked list (add to the end of the list)
+display() // prints all elements in the single linked list
+barGraph() // prints the distinct elements in the single linked list as a horizontal bar graph
+Write a main program that
+- inserts randomly generated 16 English letters (from A to E) into a single linked list,
+- calls display() method to print all elements in the list
+- calls barGraph() method to print the distinct elements with the bars horizontally.
+
+Sample Output:
+Randomly generated single linked list: C E A A A B E E C C C B A C C D
+Bar Graph
+A ****
+B **
+C ******
+D *
+E ***
