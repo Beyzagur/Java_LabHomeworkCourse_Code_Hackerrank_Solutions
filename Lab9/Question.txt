@@ -1,0 +1,30 @@
+Write a Double Linked List class which includes the following methods:
+- Add (which inserts a new element into the list (adds to the end of the list))
+- Size (which returns the number of elements in the list)
+- Display1 (which prints all items in the list from head to tail)
+- Display2 (which prints all items in the list from tail to head)
+- Swap (x) (which exchanges the x th element from the beginning and the x th element from the end)
+Write a main program that
+- inserts 9 numbers into a double linked list,
+- calls display() methods to print all elements in the list
+- calls size() method to print the number of elements in the list
+- take a number (x) from the user and calls the swap method for exchange operation
+The program must control all possible errors.
+Example:
+DoubleLinkedList DLL = new DoubleLinkedList();
+DLL.Add(10);
+DLL.Add(20);
+DLL.Add(30);
+DLL.Add(40);
+DLL.Add(50);
+DLL.Add(60);
+DLL.Add(70);
+DLL.Add(80);
+DLL.Add(90);
+DLL.Display1(); // 10 20 30 40 50 60 70 80 90
+DLL.Display2(); // 90 80 70 60 50 40 30 20 10
+System.out.println(DLL.Size()); // 9
+// Here, take a number (x) from the user and control all possible errors
+// Assume that x=3
+DLL.Swap(x);
+DLL.Display1(); // 10 20 70 40 50 60 30 80 90
