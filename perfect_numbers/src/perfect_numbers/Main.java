@@ -29,7 +29,7 @@ public class Main {
 			}
 
 		} catch (Exception e) {
-			System.out.println("You did not enter a number.");
+			System.out.println("You did not enter a number. ");
 		}
 
 	}
