@@ -16,23 +16,22 @@ public class Main {
 
 			for (int i = 1; i < number; i++) {
 				if (number % i == 0) {
-					sum=sum+i;
+					sum = sum + i;
 				}
 
 			}
-			
-			if(sum==number) {
+
+			if (sum == number) {
 				System.out.println("The number entered is a perfect number.");
-			}
-			else {
+			} else {
 				System.out.println("The number entered is not a perfect number.");
 
 			}
-			
+
 		} catch (Exception e) {
 			System.out.println("You did not enter a number.");
 		}
-		
+
 	}
 
 }
