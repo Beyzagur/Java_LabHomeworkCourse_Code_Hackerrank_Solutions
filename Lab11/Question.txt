@@ -1,0 +1,17 @@
+ Write a Circular Linked List class which includes the following methods:
+
+ - Add (which inserts a new element to the beginning of the list)
+ - Display (which prints all items in the list) 
+ - Josephus(X,Y) (which determines the last remaining man in the circle)
+
+The "Josephus" problem is to identify the position of the last remaining man when X men stand in a circle and every Y^th
+th man will be successively eliminated from the circle.
+
+ Write a main program that takes two integers (X and Y) from the user and then prints the result of the "Josephus" problem. Example:
+
+CircularLinkedList CLL = new CircularLinkedList();
+// Take X and Y from the user
+// for ... add numbers to the circular queue
+ CLL.Add(i);
+CLL.display(); // 1 2 3 4 5 6 7 8 9 10 ...
+System.out.println(Josephus(X,Y)); 
