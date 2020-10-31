@@ -1,0 +1,35 @@
+Write a program that constructs a multi-linked list from a two-dimensional array with any size and then traverse multi-linked
+list to determine whether the matrix is a scalar matrix or not.
+A scalar matrix is basically a square matrix whose all diagonal elements are equal and all other elements means off diagonal
+elements are zero.
+Don’t take any input from the user. Assign the matrix in the code.
+
+Examples:
+int[][] matrix ={{55,0,0,0,0},
+	 	 {0,55,0,0,0},
+ 		 {0,0,55,0,0},
+ 		 {0,0,0,55,0},
+		 {0,0,0,0,55}}
+Output: true
+
+int[][] matrix ={{18,0,0,0},
+ 		 {0,18,0,0},
+		 {0,0,18,0},
+      		 {0,0,0,18}}
+Output: true
+
+int[][] matrix ={{6,0,0,0,0,0},
+		 {0,6,0,0,0,0},
+		 {0,0,6,0,0,5},
+		 {0,0,0,6,0,0},
+		 {0,0,0,0,6,0},
+		 {0,0,0,0,0,6}}
+Output: false
+
+int[][] matrix ={{6,0,0,0,0,0},
+		 {0,6,0,0,0,0},
+		 {0,0,6,0,0,0},
+		 {0,0,0,6,0,0},
+		 {0,0,0,0,7,0},
+		 {0,0,0,0,0,6}}
+Output: false
