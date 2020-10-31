@@ -1,0 +1,40 @@
+1- Write a Linked Stack class that includes push, pop, peek, size, isEmpty methods.
+Write a main program that takes an expression as string from the user and then checks the parenthesis of the expression by
+using Linked Stack.
+Assume that the expression only includes round brackets “(“ and “)”.
+
+Example:
+Input string: “(x*(y+z))+2”
+Output: true
+
+Input string: “(x+y)*z)(”
+Output: false
+
+
+2- Write a Linked Queue class that includes enqueue, dequeue, size, peek, isEmpty methods.
+Write a main program that inserts n numbers into a Linked Queue and then finds the median element of the queue.
+
+Example 1:
+LinkedQueueu LQ = new LinkedQueue();
+LQ.Add(10);
+LQ.Add(20);
+LQ.Add(30);
+LQ.Add(40);
+LQ.Add(50);
+LQ.Add(60);
+LQ.Add(70);
+LQ.Median();
+
+Output: 40
+
+Example 2:
+LinkedQueueu LQ = new LinkedQueue();
+LQ.Add(10);
+LQ.Add(20);
+LQ.Add(30);
+LQ.Add(40);
+LQ.Add(50);
+LQ.Add(60);
+LQ.Median();
+
+Output: 35
