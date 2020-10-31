@@ -1,0 +1,77 @@
+The DNA language has an alphabet of four symbols or “letters”, A, C, G and T, which are ordered to convey a specific piece of information. In our cells, these four DNA letters are linked together in a precise order in very long molecular chains, which convey genetic information to our cells.
+
+The genetic code is carried by DNA (DeoxyriboNucleic Acid) molecules. DNA is composed of matched base pairs, where bases are Adenine (A), Cytosine (C), Guanine (G) and Thymine (T).
+
+A is always paired with T and C is always paired with G.
+
+We can represent a DNA piece as a queue of the base letters of one side of the DNA helix.
+
+Example:
+ front                          rear
+Queue: A A A A T A G T G C ... T
+
+Write a program that randomly generates two DNA pieces (each with length 21) and stores them as two separate “Queue”s and then carried outs the following DNA operations:
+- Complement of the first DNA piece 
+- Amino Acids of the first DNA piece 
+- Crossover of two DNA pieces
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+In your program, you can use queue as you want, but you must use only queue.
+Don’t use other data structures such as array, arraylist or stack. 
+
+Please use the queue class which is given in the course power point slides.
+The queue class has only the following methods: enqueue, dequeue, peek, isFull, isEmpty and size.
+Don’t add a new method into the queue class. 
+
+Complement
+The complement of a DNA sequence is a sequence of the complementary letters (A-T, C-G) of the sequence.
+The program should construct a new queue which contains the complement of the DNA sequence.
+
+Example:
+      front                    rear
+Queue1: A A A A T A G T G C ... T
+      front                    rear
+Queue2: T T T T A T C A C G ... A
+
+Amino Acids
+A DNA sequence codes for a sequence of amino acids that make up a protein. Each 3 letters of DNA code for one amino acid.
+The following amino acids should be inserted into queues (i.e. Queue3 and Queueu4)
+Queue3.enqueue(“AAA”); Queue4.enqueue(“Lys”); Queue3.enqueue(“ACA”); Queue4.enqueue(“Thr”);
+Queue3.enqueue(“ATA”); Queue4.enqueue(“Ile”); Queue3.enqueue(“AGA”); Queue4.enqueue(“Arg”);
+Queue3.enqueue(“CAA”); Queue4.enqueue(“Gln”); Queue3.enqueue(“CCA”); Queue4.enqueue(“Pro”);
+Queue3.enqueue(“CTA”); Queue4.enqueue(“Leu”); Queue3.enqueue(“CGA”); Queue4.enqueue(“Arg”);
+AAC Asn		ACC Thr		ATC Ile		AGC Ser		CAC His		CCC Pro
+CTC Leu		CGC Arg		AAT Asn		ACT Thr		ATT Ile		AGT Ser
+CAT His		CCT Pro		CTT Leu		CGT Arg		AAG Lys		ACG Thr
+ATG Met 	AGG Arg		CAG Gln		CCG Pro 	CTG Leu 	CGG Arg
+TAA (STOP)	TCA Ser		TTA Leu		TGA (STOP)	TAC Tyr		TAT Tyr
+TAG (STOP)	TCC Ser		TTC Phe		TGC Cys		TCT Ser		TCG Ser
+TTT Phe		TTG Leu		TGT Cys		TGG Trp		GAA Glu		GAC Asp
+GAT Asp		GAG Glu		GCA Ala		GCC Ala		GCT Ala		GCG Ala
+GTA Val		GTC Val		GTT Val		GTG Val		GGA Gly		GGC Gly
+GGT Gly		GGG Gly
+
+The program should construct a new queue which contains the sequence of amino acids specified by a DNA sequence.
+
+Example:
+       front                    rear
+Queue1: A A A A T A G T G C ... T
+       front             rear
+Queue5: Lys Ile Val ... Try
+
+Crossover
+Crossover is a genetic operator that combines two DNA sequences (parents) to produce new sequences (offspring).
+A single crossover point is randomly selected and then all data beyond that point is swapped between the two DNA sequences.
+
+Example:
+        front                   rear
+Queue1: A A A A T A G T G C ... T
+        front                   rear
+Queue6: T G G G C A T T A A ... C
+
+Randomly generated crossover point: 3
+
+After crossover:
+        front                   rear
+Queue1: A A A G C A T T A A ... C
+        front                   rear
+Queue6: T G G A T A G T G C ... T
