@@ -10,7 +10,6 @@ public class Solution {
 		Scanner scan = new Scanner(System.in);
 		B = scan.nextInt();
 		H = scan.nextInt();
-		scan.close();
 		try {
 			if (B <= 0 || H <= 0) {
 				flag = false;
